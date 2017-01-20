@@ -1,0 +1,78 @@
+#rotate, #skew, #all, #animate, #new, #second, #last{
+  border: 2px solid #000;
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: 10px;
+}
+
+h3{
+  border-bottom: 1px solid #000;
+  text-align: center;
+}
+
+#rotate {
+    transform: rotate(7deg);
+}
+
+#skew{
+    transform: skew(5deg, 10deg);
+}
+
+#all{
+  box-shadow: 10px 10px 5px #888888;
+  border-radius: 8px;
+  transform: rotate(7deg);
+}
+
+
+#animate{
+    background-color: pink;
+    animation-name: hue;
+    animation-duration: 10s;
+    border-radius: 8px;
+    box-shadow: 10px 10px 5px #888888;
+}
+@keyframes hue{
+    from {background-color: lightblue;}
+    to {background-color: purple;}
+}
+
+#new{
+    background-color: red;
+    animation-name: new;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+@keyframes new {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+}
+
+#second{
+    position: relative;
+    background-color: lightblue;
+    animation-name: lol;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes lol {
+    0%   {background-color:purple; left:0px; top:0px;}
+    25%  {background-color:pink; left:500px; top:0px;}
+    100% {background-color:purple; left:0px; top:0px;}
+}
+
+#last:hover{    
+    animation-name: rotate; 
+    animation-duration: 2s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
